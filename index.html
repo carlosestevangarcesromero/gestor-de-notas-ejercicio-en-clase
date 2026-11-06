@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de notas</title>
+  <!-- Enlazamos la hoja de estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Gestor de notas</h1>
+
+    <!-- Formulario principal -->
+    <form id="formulario">
+      <!-- Datos del docente -->
+      <label for="docente">Nombre del docente</label>
+      <input type="text" id="docente" placeholder="Ej: Estevan Garcés" required>
+
+      <!-- Estudiante 1 -->
+      <fieldset>
+        <legend>Estudiante 1</legend>
+        <input type="text" id="est1" placeholder="Nombre del estudiante" required>
+        <div class="notas">
+          <input type="number" class="nota1" step="0.1" placeholder="Nota 1" required>
+          <input type="number" class="nota1" step="0.1" placeholder="Nota 2" required>
+          <input type="number" class="nota1" step="0.1" placeholder="Nota 3" required>
+          <input type="number" class="nota1" step="0.1" placeholder="Nota 4" required>
+        </div>
+      </fieldset>
+
+      <!-- Estudiante 2 -->
+      <fieldset>
+        <legend>Estudiante 2</legend>
+        <input type="text" id="est2" placeholder="Nombre del estudiante" required>
+        <div class="notas">
+          <input type="number" class="nota2" step="0.1" placeholder="Nota 1" required>
+          <input type="number" class="nota2" step="0.1" placeholder="Nota 2" required>
+          <input type="number" class="nota2" step="0.1" placeholder="Nota 3" required>
+          <input type="number" class="nota2" step="0.1" placeholder="Nota 4" required>
+        </div>
+      </fieldset>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <!-- Aquí se muestran los mensajes de error -->
+    <p id="error" class="error"></p>
+
+    <!-- Aquí se muestran los resultados -->
+    <section id="resultado"></section>
+  </main>
+
+  <!-- Cargamos el JavaScript al final para que el HTML ya exista -->
+  <script src="app.js"></script>
+</body>
+</html>
