@@ -1,0 +1,94 @@
+/* Estilos generales de la página */
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Caja central */
+.contenedor {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #1f3b63;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Todos los campos de texto y número */
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px;
+  border: 1px solid #b8c4d4;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 1px solid #d0d8e4;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+legend {
+  font-weight: bold;
+  color: #1f3b63;
+}
+
+/* Las 4 notas en una fila */
+.notas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1f3b63;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2c5490;
+}
+
+.error {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* Tarjeta de resultado de cada estudiante */
+.tarjeta {
+  border-left: 6px solid #999999;
+  background: #f7f9fc;
+  padding: 10px 14px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+/* Un color por cada desempeño */
+.reprobado { border-color: #c0392b; }
+.regular   { border-color: #e67e22; }
+.bueno     { border-color: #2980b9; }
+.excelente { border-color: #27ae60; }
+
+/* En celulares, las notas pasan a 2 columnas */
+@media (max-width: 480px) {
+  .notas { grid-template-columns: repeat(2, 1fr); }
+}
